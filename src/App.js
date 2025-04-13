@@ -4,90 +4,6 @@ import { useLocation } from 'react-router-dom';
 import { useState,useEffect,createContext } from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import { Link } from 'react-router-dom';
-import Home from "./Files/Home";
-import About from "./Files/About";
-import Contact from "./Files/Contact";
-import Header3 from './Files/Header3';
-import Comp2 from './Components/Comp2';
-import N from './Files/N';
-import New from './Files/New';
-import Web1 from './Folder1/Web1';
-import Web2 from './Folder1/Web2';
-import Footer1 from './Folder1/Footer1';
-import Web3 from './Folder1/Web3';
-import Add from './Props/Add';
-import Add2 from './Props/Add2';
-import Footer2 from './Props/Footer2';
-import Add3 from './Props/Add3';
-import Add4 from './Props/Add4';
-import Greater from './Props/Greater';
-import Number1 from './Props/Number1';
-import Login from './Props/Login';
-import Register from './Props/Register';
-import Page1 from './Props/Page1';
-import Page2 from './Props/Page2';
-import Form from './Components/Form';
-import Page3 from './Props/Page3';
-import Login1 from './Useeffect/Login1';
-import Color from './Props/Color';
-import Map from './Useeffect/Map';
-import Map2 from './Useeffect/Map2';
-import Page4 from './Props/Page4';
-import Map3 from './Useeffect/Map3';
-import Week from './Props/week';
-import Monday from './TODO/Monday';
-import Tuesday from './TODO/Tuseday';
-import Wednesday from './TODO/Wednesday';
-import Thursday from './TODO/Thursday';
-import Friday from './TODO/Friday';
-import Saturday from './TODO/Satursay';
-import Sunday from './TODO/Sunday';
-import Gori from './Useeffect/Gori';
-import Home1 from './Useeffect/Home1';
-import Headernews from './News/Headernews';
-import News1 from './News/News1';
-import News2 from './News/News2';
-import News3 from './News/News3';
-import News4 from './News/News4';
-import Blog1 from './Blog/Blog1';
-import Blog2 from './Blog/Blog2';
-import { ThemeProvider } from './usecontext/Theme';
-import ThemeSwitcher from './usecontext/ThemeSwitch';
-import Users from './Database/User';
-import Posts from './Database/users';
-import Enter from './Database/Enter';
-import Reg from './Database/Reg';
-import Head from './Pivot/Head';
-import P1 from './Pivot/P1';
-import Foot from './Pivot/Foot';
-import P2 from './Pivot/P2';
-import P3 from './Pivot/P3';
-import P4 from './Pivot/P4';
-import P5 from './Pivot/P5';
-import Adminpanel from './Pivot/Adminpanel';
-import Blogdata from './Pivot/Blogdata';
-import Blog from './Pivot/Blog';
-import Schedule from './Teacher/Schedule';
-import Timetable from './Teacher/Timetable';
-import Class6 from './Teacher/Class6';
-import Class7 from './Teacher/Class7';
-import Class8 from './Teacher/Class8.js';
-import Time1 from './Timetable/Time1.js';
-import Time2 from './Timetable/Time2.js';
-import Class9A from './Timetable/Class9A.js';
-import Class9B from './Timetable/Class9B.js';
-import Class9C from './Timetable/Class9C.js';
-import Class9D from './Timetable/Class9D.js';
-import Class9E from './Timetable/Class9E.js';
-import Class9F from './Timetable/Class9F.js';
-import Class9G from './Timetable/Class9G.js';
-import Class10A from './Timetable/Class10A.js';
-import Class10B from './Timetable/Class10B.js';
-import Class10C from './Timetable/Class10C.js';
-import Class10D from './Timetable/Class10D.js';
-import Class10E from './Timetable/Class10E.js';
-import Class10F from './Timetable/Class10F.js';
-import Class10G from './Timetable/Class10G.js';
 import School from './LMS/School.js';
 import Adminlogin from './LMS/Adminlogin.js';
 import Studentlogin from './LMS/Studentlogin.js';
@@ -134,7 +50,6 @@ import Admin1112 from './LMS/Admin1112.js';
 import Admin1113 from './LMS/Admin1113.js';
 import Admprofile from './LMS/Admprofile.js';
 import Supprofile from './LMS/Supprofile.js';
-const Blogp1 = React.lazy(() => import('./Blog/Blogp1'));
 function App() {
   const log=localStorage.getItem("login");
   const log1=localStorage.getItem("adminlog");
@@ -148,16 +63,11 @@ function App() {
   }, []);
   return (
     <div className='App'>
-      {/* <ThemeProvider>
-        <ThemeSwitcher/>
-      </ThemeProvider> */}
      <Router>
-      <Suspense  fallback={<div><h1>Loading...<br/>Please Wait</h1></div>}>
       {!log && !log1 && !log2 && <School/>}
       {log &&  <Studentlogin/>}
       {log1 &&  <Adminlogin/>}
       {log2 &&  <Superviserlogin/>}
-      {/* <Time1/> */}
       <Routes>
         <Route path='/school1' element={<School1/>}/>
         <Route path='/school2' element={<School2 />}/>
@@ -202,31 +112,6 @@ function App() {
         </Route>
         <Route path='/admin' element={<Admprofile/>}/>
         <Route path='/supprofile' element={<Supprofile/>}/>
-        
-        <Route path='/' element={<Time2/>}/>
-        <Route path='/9A' element={<Class9A/>}/>
-        <Route path='/9B' element={<Class9B/>}/>
-        <Route path='/9C' element={<Class9C/>}/>
-        <Route path='/9D' element={<Class9D/>}/>
-        <Route path='/9E' element={<Class9E/>}/>
-        <Route path='/9F' element={<Class9F/>}/>
-        <Route path='/9G' element={<Class9G/>}/>
-        <Route path='/10A' element={<Class10A/>}/>
-        <Route path='/10B' element={<Class10B/>}/>
-        <Route path='/10C' element={<Class10C/>}/>
-        <Route path='/10D' element={<Class10D/>}/>
-        <Route path='/10E' element={<Class10E/>}/>
-        <Route path='/10F' element={<Class10F/>}/>
-        <Route path='/10G' element={<Class10G/>}/>
-        {/* <Route path='/' element={<P1/>}/>
-        <Route path='/p2' element={<P2/>}/>
-        <Route path='/p3' element={<P3/>}/>
-        <Route path='/p4' element={<P4/>}/>
-        <Route path='/p5' element={<P5/>}/>
-        <Route path='/admin' element={<Adminpanel/>}/>
-        <Route path='/blogdata' element={<Blogdata/>}/>
-        <Route path='/blog' element={<Blog/>}/>
-        <Route path='/summer' element={<Blog/>}/> */}
       </Routes>
       </Suspense>
     </Router> 
