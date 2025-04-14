@@ -1,9 +1,9 @@
 # Login Details for Admin:-
-Username:-william@gmail.com,password:-345
+Username:- william@gmail.com, password:-345
 # Login Details for Student:-
-Username:-nicolas@gmail.com,password:-2345
+Username:- nicolas@gmail.com ,password:-2345
 # Login Details for Superviser:-
-Username:-maria.ford@gmail.com,password:-234
+Username:- maria.ford@gmail.com, password:-234
 
 # Getting Started with Create React App
 
