@@ -1,3 +1,10 @@
+# Login Details for Admin:-
+Username:-william@gmail.com,password:-345
+# Login Details for Student:-
+Username:-nicolas@gmail.com,password:-2345
+# Login Details for Superviser:-
+Username:-maria.ford@gmail.com,password:-234
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
